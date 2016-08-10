@@ -1,0 +1,30 @@
+<p>
+  other component works!
+</p>
+
+<h1>Example of String Interpolation</h1>
+{{stringInterpolation}}
+<hr>
+<h1>Example of Property Binding</h1>
+<input type="text" [value]="textboxData"/>
+<p [ngClass]="{redBorder:true}">
+  Is this text styled?
+</p>
+<p [ngClass]="{redBorder:onEvaluation()}">
+  Is this text NOT styled?
+</p>
+<hr>
+<h1>Example of Custom-Property Binding</h1>
+<p> 
+  value set from other component to customproperty binding component is: 
+  
+  <app-custompropbinding [valueFromOutside]="10"> </app-custompropbinding>
+
+
+</p>
+
+<hr>
+<h1>Example of (click) Event Binding</h1>
+<app-eventbinding (publicCustomEventListenable)="whenClicked($event)"></app-eventbinding>
+<hr>
+<app-two-way-binding> </app-two-way-binding>
